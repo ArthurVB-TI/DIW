@@ -375,24 +375,28 @@ tbody tr:hover td{
     border-radius: 10px;
 }
 
-#nivel-html{
+#nivel-php{
     width: 90%;
 }
 
-#nivel-js{
-    width: 70%;
+#nivel-mysql{
+    width: 90%;
 }
 
-#nivel-java{
+#nivel-html{
+    width: 80%;
+}
+
+#nivel-js{
     width: 75%;
 }
 
-#nivel-c{
-    width: 65%;
+#nivel-csharp{
+    width: 70%;
 }
 
-#nivel-sql{
-    width: 60%;
+#nivel-python{
+    width: 70%;
 }
 
 .marcadores{
