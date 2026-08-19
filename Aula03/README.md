@@ -15,7 +15,7 @@ Aula03/
 ├── public/
 │   ├── index.html
 │   ├── style.css
-│   └── avatar.svg
+│   └── foto.png
 ├── Images/
 │   └── Site.png
 └── README.md
