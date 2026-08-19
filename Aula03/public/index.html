@@ -4,21 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Arthur Victor Alves">
-    <meta name="description" content="Curriculum Vitae de Arthur Victor Alves">
+    <meta name="description" content="Curriculum Vitae de Arthur Victor Alves, estudante de Ciência da Computação na PUC Minas">
     <title>Curriculum Vitae - Arthur Victor Alves</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="topo">
-        <img id="foto" src="avatar.svg" alt="Avatar de Arthur Victor Alves">
-        <div id="identificacao">
-            <h1>Arthur Victor Alves</h1>
-            <p id="cargo">Estudante de Ciência da Computação</p>
-            <p id="matricula">Matrícula: 911060</p>
-        </div>
-    </header>
-
     <nav id="menu">
+        <a id="marca" href="#topo">Arthur Victor</a>
         <ul>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#formacao">Formação</a></li>
@@ -29,8 +21,22 @@
         </ul>
     </nav>
 
+    <header id="topo">
+        <img id="foto" src="avatar.svg" alt="Foto de Arthur Victor Alves">
+        <div id="identificacao">
+            <p id="saudacao">Olá, eu sou</p>
+            <h1>Arthur Victor Alves</h1>
+            <p id="cargo">Estudante de Ciência da Computação</p>
+            <p id="matricula">Matrícula: 911060 &bull; PUC Minas</p>
+            <div id="acoes">
+                <a class="botao" href="#contato">Entre em contato</a>
+                <a class="botao secundario" href="https://github.com/ArthurVB-TI">Ver GitHub</a>
+            </div>
+        </div>
+    </header>
+
     <main>
-        <section id="sobre">
+        <section id="sobre" class="cartao">
             <h2>Sobre mim</h2>
             <p>
                 Estudante de Ciência da Computação na PUC Minas, com interesse em
@@ -39,9 +45,23 @@
                 Atualmente estudo HTML, CSS e JavaScript na disciplina de
                 Desenvolvimento de Interfaces Web.
             </p>
+            <div id="numeros">
+                <div class="numero">
+                    <strong>2°</strong>
+                    <span>período</span>
+                </div>
+                <div class="numero">
+                    <strong>5+</strong>
+                    <span>linguagens</span>
+                </div>
+                <div class="numero">
+                    <strong>10+</strong>
+                    <span>projetos acadêmicos</span>
+                </div>
+            </div>
         </section>
 
-        <section id="formacao">
+        <section id="formacao" class="cartao">
             <h2>Formação</h2>
             <table>
                 <thead>
@@ -57,60 +77,77 @@
                         <td>Ciência da Computação</td>
                         <td>PUC Minas</td>
                         <td>2025 - 2029</td>
-                        <td>Em andamento</td>
+                        <td><span class="etiqueta andamento">Em andamento</span></td>
                     </tr>
                     <tr>
                         <td>Ensino Médio</td>
                         <td>Colégio Santa Maria</td>
                         <td>2022 - 2024</td>
-                        <td>Concluído</td>
+                        <td><span class="etiqueta concluido">Concluído</span></td>
                     </tr>
                     <tr>
                         <td>Inglês - Nível Avançado</td>
                         <td>Cultura Inglesa</td>
                         <td>2019 - 2023</td>
-                        <td>Concluído</td>
+                        <td><span class="etiqueta concluido">Concluído</span></td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <section id="experiencia">
+        <section id="experiencia" class="cartao">
             <h2>Experiência</h2>
-            <article class="item">
-                <h3>Monitor de Algoritmos e Estruturas de Dados</h3>
-                <p class="periodo">PUC Minas | 2026 - atual</p>
-                <p>
-                    Auxílio aos alunos do primeiro período em listas de exercícios de
-                    algoritmos, com plantões de dúvidas e correção de código em C e Java.
-                </p>
-            </article>
-            <article class="item">
-                <h3>Desenvolvedor Front-end (projeto acadêmico)</h3>
-                <p class="periodo">Projeto Pikamon | 2025 - 2026</p>
-                <p>
-                    Desenvolvimento de páginas web com HTML, CSS e JavaScript, com
-                    versionamento do código em Git e GitHub.
-                </p>
-            </article>
+            <ul id="linha-do-tempo">
+                <li class="item">
+                    <h3>Monitor de Algoritmos e Estruturas de Dados</h3>
+                    <p class="periodo">PUC Minas &bull; 2026 - atual</p>
+                    <p>
+                        Auxílio aos alunos do primeiro período em listas de exercícios de
+                        algoritmos, com plantões de dúvidas e correção de código em C e Java.
+                    </p>
+                </li>
+                <li class="item">
+                    <h3>Desenvolvedor Front-end (projeto acadêmico)</h3>
+                    <p class="periodo">Projeto Pikamon &bull; 2025 - 2026</p>
+                    <p>
+                        Desenvolvimento de páginas web com HTML, CSS e JavaScript, com
+                        versionamento do código em Git e GitHub.
+                    </p>
+                </li>
+            </ul>
         </section>
 
-        <section id="habilidades">
+        <section id="habilidades" class="cartao">
             <h2>Habilidades</h2>
             <div id="colunas">
                 <div class="coluna">
                     <h3>Linguagens</h3>
-                    <ul>
-                        <li>HTML e CSS</li>
-                        <li>JavaScript</li>
-                        <li>Java</li>
-                        <li>C</li>
-                        <li>SQL</li>
+                    <ul class="niveis">
+                        <li>
+                            <span>HTML e CSS</span>
+                            <div class="barra"><div class="preenchimento" id="nivel-html"></div></div>
+                        </li>
+                        <li>
+                            <span>JavaScript</span>
+                            <div class="barra"><div class="preenchimento" id="nivel-js"></div></div>
+                        </li>
+                        <li>
+                            <span>Java</span>
+                            <div class="barra"><div class="preenchimento" id="nivel-java"></div></div>
+                        </li>
+                        <li>
+                            <span>C</span>
+                            <div class="barra"><div class="preenchimento" id="nivel-c"></div></div>
+                        </li>
+                        <li>
+                            <span>SQL</span>
+                            <div class="barra"><div class="preenchimento" id="nivel-sql"></div></div>
+                        </li>
                     </ul>
                 </div>
                 <div class="coluna">
                     <h3>Ferramentas</h3>
-                    <ul>
+                    <ul class="marcadores">
                         <li>Git e GitHub</li>
                         <li>Visual Studio Code</li>
                         <li>Linux</li>
@@ -119,7 +156,7 @@
                 </div>
                 <div class="coluna">
                     <h3>Idiomas</h3>
-                    <ul>
+                    <ul class="marcadores">
                         <li>Português - nativo</li>
                         <li>Inglês - avançado</li>
                         <li>Espanhol - básico</li>
@@ -128,19 +165,32 @@
             </div>
         </section>
 
-        <section id="contato">
+        <section id="contato" class="cartao">
             <h2>Contato</h2>
             <ul id="links">
-                <li>E-mail: <a href="mailto:arthurbaptistati@gmail.com">arthurbaptistati@gmail.com</a></li>
-                <li>GitHub: <a href="https://github.com/ArthurVB-TI">github.com/ArthurVB-TI</a></li>
-                <li>Telefone: (31) 99999-9999</li>
-                <li>Belo Horizonte - MG</li>
+                <li>
+                    <strong>E-mail</strong>
+                    <a href="mailto:arthurbaptistati@gmail.com">arthurbaptistati@gmail.com</a>
+                </li>
+                <li>
+                    <strong>GitHub</strong>
+                    <a href="https://github.com/ArthurVB-TI">github.com/ArthurVB-TI</a>
+                </li>
+                <li>
+                    <strong>Telefone</strong>
+                    <span>(31) 99999-9999</span>
+                </li>
+                <li>
+                    <strong>Local</strong>
+                    <span>Belo Horizonte - MG</span>
+                </li>
             </ul>
         </section>
     </main>
 
     <footer>
-        <p>Arthur Victor Alves - Matrícula: 911060 | DIW - PUC Minas</p>
+        <p>Arthur Victor Alves - Matrícula: 911060</p>
+        <p>DIW - Desenvolvimento de Interfaces Web | PUC Minas</p>
     </footer>
 </body>
 </html>

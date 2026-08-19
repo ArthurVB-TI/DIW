@@ -1,93 +1,196 @@
+:root{
+    --escuro: #14213d;
+    --escuro2: #1f3260;
+    --destaque: #fca311;
+    --fundo: #eef1f6;
+    --branco: #ffffff;
+    --texto: #222222;
+    --cinza: #666666;
+    --borda: #dde3ec;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    background-color: #eef1f6;
+    background-color: var(--fundo);
     font-family: Arial, Helvetica, sans-serif;
-    color: #222222;
+    color: var(--texto);
     line-height: 1.6;
 }
 
-#topo{
-    background-color: #14213d;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 20px;
-}
-
-#foto{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid white;
-    object-fit: cover;
-}
-
-#identificacao h1{
-    font-size: 2.5em;
-}
-
-#cargo{
-    font-size: 1.2em;
-    color: #fca311;
-}
-
-#matricula{
-    font-size: 0.9em;
-}
-
 #menu{
-    background-color: #fca311;
+    background-color: var(--escuro);
     position: sticky;
     top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#marca{
+    color: var(--branco);
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 0;
+}
+
+#marca:hover{
+    color: var(--destaque);
 }
 
 #menu ul{
     list-style: none;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
 }
 
-#menu a{
+#menu ul a{
     display: block;
-    padding: 15px 20px;
-    color: #14213d;
+    padding: 18px 15px;
+    color: var(--branco);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+#menu ul a:hover{
+    color: var(--destaque);
+    border-bottom-color: var(--destaque);
+}
+
+#topo{
+    background: linear-gradient(135deg, var(--escuro) 0%, var(--escuro2) 100%);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 30px;
+}
+
+#foto{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 5px solid var(--destaque);
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#saudacao{
+    color: var(--destaque);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+}
+
+#identificacao h1{
+    font-size: 2.8em;
+    line-height: 1.2;
+}
+
+#cargo{
+    font-size: 1.3em;
+    margin-top: 5px;
+}
+
+#matricula{
+    font-size: 0.9em;
+    color: #c8d0e0;
+}
+
+#acoes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.botao{
+    display: inline-block;
+    background-color: var(--destaque);
+    color: var(--escuro);
     font-weight: bold;
     text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
 }
 
-#menu a:hover{
-    background-color: #14213d;
-    color: white;
+.botao:hover{
+    background-color: var(--branco);
+}
+
+.botao.secundario{
+    background-color: transparent;
+    color: var(--branco);
+    border: 2px solid var(--destaque);
+}
+
+.botao.secundario:hover{
+    background-color: var(--destaque);
+    color: var(--escuro);
 }
 
 main{
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
-    padding: 30px 20px;
+    padding: 40px 20px;
 }
 
-section{
-    background-color: white;
+.cartao{
+    background-color: var(--branco);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 12px rgba(20, 33, 61, 0.08);
+}
+
+.cartao h2{
+    color: var(--escuro);
+    font-size: 1.6em;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--destaque);
+}
+
+#numeros{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.numero{
+    flex: 1;
+    min-width: 140px;
+    background-color: var(--fundo);
     border-radius: 10px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
 }
 
-section h2{
-    color: #14213d;
-    border-bottom: 3px solid #fca311;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
+.numero strong{
+    display: block;
+    color: var(--escuro);
+    font-size: 2em;
+}
+
+.numero span{
+    color: var(--cinza);
+    font-size: 0.9em;
 }
 
 table{
@@ -96,63 +199,210 @@ table{
 }
 
 th{
-    background-color: #14213d;
-    color: white;
+    background-color: var(--escuro);
+    color: var(--branco);
     text-align: left;
-    padding: 10px;
+    padding: 12px;
+}
+
+th:first-child{
+    border-radius: 8px 0 0 0;
+}
+
+th:last-child{
+    border-radius: 0 8px 0 0;
 }
 
 td{
-    border-bottom: 1px solid #cccccc;
-    padding: 10px;
+    border-bottom: 1px solid var(--borda);
+    padding: 12px;
 }
 
-tr:hover td{
-    background-color: #eef1f6;
+tbody tr:hover td{
+    background-color: var(--fundo);
+}
+
+.etiqueta{
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.etiqueta.andamento{
+    background-color: #fff1d6;
+    color: #8a5a00;
+}
+
+.etiqueta.concluido{
+    background-color: #e2ecff;
+    color: var(--escuro);
+}
+
+#linha-do-tempo{
+    list-style: none;
+    border-left: 3px solid var(--borda);
+    padding-left: 25px;
 }
 
 .item{
-    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.item:last-child{
+    padding-bottom: 0;
+}
+
+.item::before{
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--destaque);
+    border: 3px solid var(--branco);
+    border-radius: 50%;
 }
 
 .item h3{
-    color: #14213d;
+    color: var(--escuro);
 }
 
 .periodo{
     font-size: 0.9em;
-    color: #666666;
-    font-style: italic;
+    color: var(--cinza);
+    margin-bottom: 5px;
 }
 
 #colunas{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 35px;
 }
 
 .coluna{
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
 }
 
 .coluna h3{
-    color: #14213d;
-    margin-bottom: 5px;
+    color: var(--escuro);
+    margin-bottom: 12px;
 }
 
-.coluna ul, #links{
-    list-style: square;
-    padding-left: 20px;
+.niveis{
+    list-style: none;
+}
+
+.niveis li{
+    margin-bottom: 12px;
+}
+
+.niveis span{
+    font-size: 0.9em;
+}
+
+.barra{
+    background-color: var(--borda);
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.preenchimento{
+    background-color: var(--destaque);
+    height: 100%;
+    border-radius: 10px;
+}
+
+#nivel-html{
+    width: 90%;
+}
+
+#nivel-js{
+    width: 70%;
+}
+
+#nivel-java{
+    width: 75%;
+}
+
+#nivel-c{
+    width: 65%;
+}
+
+#nivel-sql{
+    width: 60%;
+}
+
+.marcadores{
+    list-style: none;
+}
+
+.marcadores li{
+    background-color: var(--fundo);
+    border-left: 4px solid var(--destaque);
+    border-radius: 6px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+}
+
+#links{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+#links li{
+    background-color: var(--fundo);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#links strong{
+    display: block;
+    color: var(--escuro);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 a{
-    color: #14213d;
+    color: var(--escuro);
 }
 
 footer{
-    background-color: #14213d;
-    color: white;
+    background-color: var(--escuro);
+    color: var(--branco);
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
+}
+
+footer p:last-child{
+    color: #c8d0e0;
+    font-size: 0.9em;
+}
+
+@media (max-width: 700px){
+    #menu{
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    #topo{
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    #identificacao h1{
+        font-size: 2em;
+    }
+
+    #acoes{
+        justify-content: center;
+    }
 }
